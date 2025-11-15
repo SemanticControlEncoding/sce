@@ -1,0 +1,24 @@
+{
+  "name": "sce-core",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b",
+    "test": "pnpm -w -r --filter ./packages/**/ts test",
+    "lint": "pnpm -w -r --filter ./packages/**/ts lint",
+    "clean:build": "pnpm -w -r --filter ./packages/**/ts exec -- rimraf dist .tsbuildinfo",
+    "build:force": "pnpm -w -r --filter ./packages/**/ts exec -- tsc -b --force"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "rimraf": "^6.1.0"
+  }
+}

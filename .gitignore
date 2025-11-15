@@ -1,0 +1,12 @@
+node_modules
+dist
+# TypeScript build info
+**/.tsbuildinfo
+
+# Coverage and editor state
+coverage/
+.vscode/
+.DS_Store
+
+# pnpm
+node_modules/

@@ -1,0 +1,11 @@
+{
+    "files": [],
+    "exclude": [
+        "**/dist/**"
+    ],
+    "references": [
+        {
+            "path": "./packages/core/ts"
+        }
+    ]
+}
