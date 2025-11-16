@@ -16,7 +16,7 @@ theme:
     - content.code.copy
     - content.action.edit
   palette:
-    - scheme: default
+    - scheme: slate
       primary: indigo
       accent: deep purple
   extra_css:
