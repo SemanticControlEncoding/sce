@@ -1,6 +1,104 @@
+/**
+ * @module ontology
+ * @description
+ * Defines the canonical Semantic Control Encoding (SCE) ontology schema.
+ *
+ * This module contains {@link SemanticOntologySchema}, a comprehensive, structured
+ * vocabulary of emoji-based semantic symbols organized into eight categories:
+ * - **structure** — Document organization (sections, pinned facts, references)
+ * - **legalPolicy** — Legal frameworks, citations, compliance records, authorities
+ * - **reasoning** — Analysis, insights, investigations
+ * - **tasks** — Actionable items and completion states
+ * - **privacy** — Data sensitivity and access control
+ * - **actors** — People, roles, and organizations
+ * - **state** — Process states and status indicators
+ * - **control** — Workflow control flow and navigation
+ *
+ * Each symbol definition includes:
+ * - `emoji` — The Unicode emoji representing the symbol
+ * - `role` — The category role (STRUCTURE, LEGAL, REASONING, TASK, PRIVACY, ACTOR, STATE, CONTROL)
+ * - `meaning` — Human-readable explanation of the symbol's purpose
+ * - `allowedContext` — Where the symbol can be used (HUMAN, LLM, TOOL)
+ * - `usage` — Whether the symbol is REQUIRED, OPTIONAL, or CONDITIONAL
+ * - `conflictsWith` — List of emojis that should not appear with this one
+ * - `example` — Real-world usage example
+ *
+ * The schema is declared with `as const satisfies SceOntologyBase` to ensure:
+ * - Strict type safety with literal types
+ * - Compile-time validation against the base ontology structure
+ * - Accurate type inference for all derived utilities
+ *
+ * @example
+ * ```typescript
+ * import { SemanticOntologySchema } from '@sce/core';
+ *
+ * // Access category definitions
+ * const analyzeSymbol = SemanticOntologySchema.reasoning.analyze;
+ * console.log(analyzeSymbol.emoji);    // "🔍"
+ * console.log(analyzeSymbol.meaning);  // "Analysis, search, or inspection of facts or records"
+ *
+ * // Iterate over categories
+ * for (const [categoryName, category] of Object.entries(SemanticOntologySchema)) {
+ *   console.log(`Category: ${categoryName}`);
+ *   for (const [key, def] of Object.entries(category)) {
+ *     console.log(`  ${def.emoji} ${key}: ${def.meaning}`);
+ *   }
+ * }
+ * ```
+ */
+
 import type { SceOntologyBase } from "./types";
 
+/**
+ * The canonical SCE (Semantic Control Encoding) ontology schema.
+ *
+ * This constant defines the complete vocabulary of emoji-based semantic symbols
+ * used for structured communication in legal, educational, and compliance contexts.
+ *
+ * The schema is organized into eight top-level categories, each containing
+ * multiple symbol definitions with rich metadata about their usage, context,
+ * conflicts, and examples.
+ *
+ * **Design Principles:**
+ * - Each emoji maps to exactly one semantic meaning
+ * - Symbols are organized by functional category
+ * - Context restrictions ensure appropriate usage
+ * - Conflict rules prevent semantic ambiguity
+ * - Examples demonstrate real-world application
+ *
+ * **Type Safety:**
+ * Declared as `const` with `satisfies SceOntologyBase` to provide:
+ * - Literal type inference for all emoji strings
+ * - Compile-time validation of structure
+ * - Strong typing for derived utilities
+ *
+ * @example
+ * ```typescript
+ * import { SemanticOntologySchema } from '@sce/core';
+ *
+ * // Type-safe category access
+ * const reasoning = SemanticOntologySchema.reasoning;
+ * const analyzeEmoji = reasoning.analyze.emoji; // "🔍"
+ *
+ * // Discover symbol metadata
+ * const action = SemanticOntologySchema.tasks.action;
+ * console.log(`${action.emoji} is ${action.usage}`);        // "📝 is REQUIRED"
+ * console.log(`Context: ${action.allowedContext.join(', ')}`); // "HUMAN, LLM, TOOL"
+ * console.log(`Conflicts: ${action.conflictsWith.join(', ')}`); // "📌"
+ * ```
+ */
 export const SemanticOntologySchema = {
+  /**
+   * **Structure Category**
+   *
+   * Symbols for organizing documents and prompts into logical sections,
+   * marking pinned facts, and referencing external sources.
+   *
+   * Contains:
+   * - `section` (🗂️) — Major document/prompt segment dividers
+   * - `pinned` (📌) — Non-negotiable constraints and established facts
+   * - `reference` (📎) — Citations and source references
+   */
   structure: {
     section: {
       emoji: "🗂️",
@@ -31,6 +129,18 @@ export const SemanticOntologySchema = {
     },
   },
 
+  /**
+   * **Legal & Policy Category**
+   *
+   * Symbols for legal frameworks, regulatory citations, compliance evidence,
+   * and institutional authorities.
+   *
+   * Contains:
+   * - `law` (⚖️) — Legal frameworks and governing authorities
+   * - `citation` (📜) — Statutory, regulatory, or policy citations
+   * - `complianceRecord` (🧾) — Evidence of compliance actions
+   * - `institutionAuthority` (🏛️) — Enforcement bodies and institutions
+   */
   legalPolicy: {
     law: {
       emoji: "⚖️",
@@ -75,6 +185,16 @@ export const SemanticOntologySchema = {
     },
   },
 
+  /**
+   * **Reasoning Category**
+   *
+   * Symbols for analytical processes, insights, and investigations.
+   *
+   * Contains:
+   * - `analyze` (🔍) — Analysis, search, or fact inspection
+   * - `insight` (🧠) — Reasoning and interpretation based on facts
+   * - `investigate` (🕵️) — Investigative steps and unresolved questions
+   */
   reasoning: {
     analyze: {
       emoji: "🔍",
@@ -110,6 +230,18 @@ export const SemanticOntologySchema = {
     },
   },
 
+  /**
+   * **Tasks Category**
+   *
+   * Symbols for actionable items, task states, and completion tracking.
+   *
+   * Contains:
+   * - `action` (📝) — Actionable instructions or required tasks
+   * - `todo` (☐) — Unchecked items not yet started
+   * - `softComplete` (☑️) — Completed but not formally verified
+   * - `complete` (✅) — Fully completed and verified
+   * - `repeat` (🔁) — Recurring or retry steps
+   */
   tasks: {
     action: {
       emoji: "📝",
@@ -161,6 +293,16 @@ export const SemanticOntologySchema = {
     },
   },
 
+  /**
+   * **Privacy Category**
+   *
+   * Symbols for data sensitivity, access control, and privacy states.
+   *
+   * Contains:
+   * - `private` (🔐) — Protected information subject to privacy laws
+   * - `authorized` (🗝️) — Authorized access under privacy rules
+   * - `open` (🔓) — Public or non-sensitive information
+   */
   privacy: {
     private: {
       emoji: "🔐",
@@ -191,6 +333,18 @@ export const SemanticOntologySchema = {
     },
   },
 
+  /**
+   * **Actors Category**
+   *
+   * Symbols representing people, roles, and organizational entities.
+   *
+   * Contains:
+   * - `generic` (👤) — Unspecified person or actor
+   * - `student` (🧑‍🎓) — Student (complainant, respondent, or peer)
+   * - `teacher` (🧑‍🏫) — Teachers, staff, or school employees
+   * - `legalAuthority` (🧑‍⚖️) — Investigators, decision-makers, adjudicators
+   * - `organization` (🏢) — Organizations, districts, schools, institutions
+   */
   actors: {
     generic: {
       emoji: "👤",
@@ -240,6 +394,17 @@ export const SemanticOntologySchema = {
     },
   },
 
+  /**
+   * **State Category**
+   *
+   * Symbols for process states, conditions, and status indicators.
+   *
+   * Contains:
+   * - `pending` (⏳) — Pending, in-progress, or awaiting dependencies
+   * - `unclear` (❓) — Unclear, incomplete, or requiring clarification
+   * - `warning` (⚠️) — Risks, concerns, or exceptions requiring attention
+   * - `prohibited` (❌) — Prohibited, non-compliant, or invalid conditions
+   */
   state: {
     pending: {
       emoji: "⏳",
@@ -280,6 +445,16 @@ export const SemanticOntologySchema = {
     },
   },
 
+  /**
+   * **Control Category**
+   *
+   * Symbols for workflow control flow and navigation.
+   *
+   * Contains:
+   * - `decisionPoint` (🔀) — Decision points or branching logic
+   * - `next` (⏭️) — Move to next step, phase, or workflow position
+   * - `back` (⏮️) — Return to previous step or earlier context
+   */
   control: {
     decisionPoint: {
       emoji: "🔀",

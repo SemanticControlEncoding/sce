@@ -33,6 +33,7 @@ export { SemanticOntologySchema } from "./ontology";
 export { validateOntology } from "./validator";
 
 export {
+  interpreter,
   getDefinitionsForEmojis,
   extractEmojisFromText,
   getDefinitionsFromText,
