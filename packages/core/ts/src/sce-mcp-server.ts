@@ -723,7 +723,8 @@ export async function handleValidateTool(input: unknown) {
     .parse(input);
 
   const { format } = parsed;
-  const issues = typeof validateOntology === "function" ? validateOntology() : [];
+  const issues =
+    typeof validateOntology === "function" ? validateOntology() : [];
 
   const payload = {
     valid: issues.length === 0,

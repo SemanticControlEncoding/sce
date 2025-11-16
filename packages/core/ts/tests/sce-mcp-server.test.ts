@@ -207,7 +207,7 @@ describe("sce-mcp-server helpers", () => {
       const output = result.content[0].text;
       expect(output).toContain("SCE Symbols Detected");
       expect(output).toContain("JSON detail:");
-      expect(output).toContain("\"emoji\": \"🧑‍🎓\"");
+      expect(output).toContain('"emoji": "🧑‍🎓"');
     });
 
     it("auto-selects json format when stdout is not a TTY", async () => {
