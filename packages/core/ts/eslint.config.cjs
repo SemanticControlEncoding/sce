@@ -5,7 +5,7 @@ module.exports = [
   ...rootConfig,
   {
     files: ["**/*.ts"],
-    ignores: ["node_modules/**", "dist/**", ".tsbuildinfo"],
+    ignores: ["node_modules/**", "dist/**", ".tsbuildinfo", "tests/**"],
     languageOptions: {
       parser: require("@typescript-eslint/parser"),
       parserOptions: {

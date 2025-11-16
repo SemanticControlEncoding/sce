@@ -943,11 +943,13 @@ server.registerTool(
 export async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
+  // eslint-disable-next-line no-console
   console.error("✨ SCE MCP server running on stdio");
 }
 
 if (process.env.SCE_MCP_SKIP_MAIN !== "1") {
   main().catch((err) => {
+    // eslint-disable-next-line no-console
     console.error("🔥 Fatal error in SCE MCP server:", err);
     process.exit(1);
   });

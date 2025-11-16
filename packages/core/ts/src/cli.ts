@@ -39,6 +39,7 @@
  */
 
 import { getDefinitionsFromText } from "./interpreter.js";
+import { log } from "./log.js";
 
 /**
  * Output format options for CLI display.
@@ -136,11 +137,11 @@ function parseArgs(argv: string[]): CliOptions {
  * ```typescript
  * // When piped: echo "Task 📝" | node cli.js
  * const text = await readStdin();
- * console.log(text); // "Task 📝\n"
+ * log((l) => l.log(text); // "Task 📝\n"
  *
  * // When interactive (TTY)
  * const text = await readStdin();
- * console.log(text); // ""
+ * log((l) => l.log(text); // ""
  * ```
  */
 function readStdin(): Promise<string> {
@@ -191,7 +192,7 @@ Commands:
 If no text argument is provided, the CLI will read from stdin.
   `.trim();
 
-  console.log(help);
+  log((l) => l.log(help));
 }
 
 /**
@@ -235,26 +236,26 @@ If no text argument is provided, the CLI will read from stdin.
  */
 function printPretty(defs: any[]) {
   if (defs.length === 0) {
-    console.log("No SCE symbols found.");
+    log((l) => l.log("No SCE symbols found."));
     return;
   }
 
   for (const def of defs) {
-    console.log(`\n${def.emoji}  ${def.meaning}`);
+    log((l) => l.log(`\n${def.emoji}  ${def.meaning}`));
     if (def.role) {
-      console.log(`  role:     ${def.role}`);
+      log((l) => l.log(`  role:     ${def.role}`));
     }
     if (Array.isArray(def.allowedContext)) {
-      console.log(`  context:  ${def.allowedContext.join(", ")}`);
+      log((l) => l.log(`  context:  ${def.allowedContext.join(", ")}`));
     }
     if (def.usage) {
-      console.log(`  usage:    ${def.usage}`);
+      log((l) => l.log(`  usage:    ${def.usage}`));
     }
     if (Array.isArray(def.conflictsWith) && def.conflictsWith.length > 0) {
-      console.log(`  conflicts: ${def.conflictsWith.join(" ")}`);
+      log((l) => l.log(`  conflicts: ${def.conflictsWith.join(" ")}`));
     }
     if (def.example) {
-      console.log(`  example:  ${def.example}`);
+      log((l) => l.log(`  example:  ${def.example}`));
     }
   }
 }
@@ -297,7 +298,7 @@ async function main() {
   }
 
   if (!text) {
-    console.error("No input text provided (argument or stdin).");
+    log((l) => l.error("No input text provided (argument or stdin)."));
     printHelp();
     process.exitCode = 1;
     return;
@@ -306,13 +307,13 @@ async function main() {
   const defs = getDefinitionsFromText(text);
 
   if (opts.format === "json" || opts.command === "json") {
-    console.log(JSON.stringify(defs, null, 2));
+    log((l) => l.log(JSON.stringify(defs, null, 2)));
   } else {
     printPretty(defs);
   }
 }
 
 main().catch((err) => {
-  console.error("Error:", err);
+  log((l) => l.error("Error:", err));
   process.exitCode = 1;
 });

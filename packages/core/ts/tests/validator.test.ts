@@ -1,5 +1,4 @@
 import { validateOntology } from "../src/validator";
-import { SemanticOntologySchema } from "../src/ontology";
 
 describe("validateOntology (default schema)", () => {
   it("returns no errors for the provided SemanticOntologySchema", () => {
