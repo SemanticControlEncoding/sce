@@ -1,0 +1,54 @@
+site_name: Semantic Communication Encoding (SCE)
+site_description: "A small, governed emoji ontology for humans, tools, and LLMs."
+site_url: https://github.com/SemanticControlEncoding/sce
+repo_name: SemanticControlEncoding/sce
+repo_url: https://github.com/SemanticControlEncoding/sce
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+  extra_css:
+    - overrides/extra.css
+
+nav:
+  - Home: index.md
+  - Getting started: GETTING-STARTED.md
+  - Specification: SPEC.md
+  - Ontology & API: ONTOLOGY-API.md
+  - MCP Integration: MCP.md
+  - Contributing & Governance:
+      - Contributing: CONTRIBUTING.md
+      - Governance: GOVERNANCE.md
+  - Roadmap: ROADMAP.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - footnotes
+  - tables
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SemanticControlEncoding/sce
+      name: SCE on GitHub

@@ -1,0 +1,40 @@
+/* Make emoji slightly larger and align nicely in headings */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.md-typeset h1 img,
+.md-typeset h2 img,
+.md-typeset h3 img {
+  margin: 0;
+}
+
+/* Inline badge styling */
+.sce-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 120, 120, 0.5);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Draft pill in sidebar/footer */
+.sce-status-draft {
+  color: #b36b00;
+  font-weight: 600;
+}
+
+.scre-header {
+  font-size: 0.9rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+}

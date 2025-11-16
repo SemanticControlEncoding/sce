@@ -1,0 +1,27 @@
+{
+  "name": "@sce/core",
+  "version": "0.0.1",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "private": false,
+  "description": "An open semantic layer enabling LLM-native communication protocols",
+  "bin": {
+    "sce": "dist/cli.js",
+    "mcp": "dist/mcp.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "EthicalUse-1.0",
+  "scripts": {
+    "build": "tsc -b",
+    "lint": "eslint --config ./eslint.config.cjs",
+    "test": "jest --config ./jest.config.cjs",
+    "test:cover": "jest --coverage --config ./jest.config.cjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "zod": "3.25.76"
+  }
+}
