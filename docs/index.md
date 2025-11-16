@@ -171,11 +171,12 @@ Each tool supports a structured `format` override:
 ## Learn more
 
 - 👉 [Getting started](GETTING-STARTED.md) – install, basic usage, examples
-- 📜 [Specification](../spec/spec-sce-standard-v1.md) – SCE standard v1 (draft)
+- 📜 [Specification](SPEC.md) – SCE standard v1 (draft)
 - 🧬 [Ontology & API](ONTOLOGY-API.md) – core symbol set & TypeScript types
 - 🔌 [MCP integration](mcp.md) – using SCE with MCP-aware tools
 - 🤝 [Contributing & Governance](CONTRIBUTING.md) – RFCs, symbol proposals, ethics
 - 🛣️ [Roadmap](ROADMAP.md) - Where we're going next
+- [Repository](https://github.com/SemanticControlEncoding/sce) - Where we are right now
 
 ---
 
