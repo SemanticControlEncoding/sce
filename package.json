@@ -4,6 +4,7 @@
   "scripts": {
     "build": "tsc -b",
     "test": "pnpm -w -r --filter ./packages/**/ts test",
+    "test:cover": "pnpm -w -r --filter ./packages/**/ts test:cover",
     "lint": "pnpm -w -r --filter ./packages/**/ts lint",
     "clean:build": "pnpm -w -r --filter ./packages/**/ts exec -- rimraf dist .tsbuildinfo",
     "build:force": "pnpm -w -r --filter ./packages/**/ts exec -- tsc -b --force",
