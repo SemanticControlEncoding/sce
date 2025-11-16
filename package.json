@@ -1,11 +1,14 @@
 {
-  "name": "sce-core",
-  "private": true,
+  "name": "@sce/root",
+  "version": "0.0.1",
+  "private": false,
+  "description": "An open semantic layer enabling LLM-native communication protocols",
   "scripts": {
     "build": "tsc -b",
     "test": "pnpm -w -r --filter ./packages/**/ts test",
     "test:cover": "pnpm -w -r --filter ./packages/**/ts test:cover",
     "lint": "pnpm -w -r --filter ./packages/**/ts lint",
+    "publish": "pnpm -w -r --filter ./packages/**/ts publish --access public",
     "clean:build": "pnpm -w -r --filter ./packages/**/ts exec -- rimraf dist .tsbuildinfo",
     "build:force": "pnpm -w -r --filter ./packages/**/ts exec -- tsc -b --force",
     "docs": "mkdocs serve"
@@ -23,5 +26,10 @@
   },
   "dependencies": {
     "rimraf": "^6.1.0"
+  },
+  "license": "EthicalUse-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SemanticControlEncoding/sce.git"
   }
 }
