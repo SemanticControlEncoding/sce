@@ -1,7 +1,7 @@
 {
-  "name": "@sce/root",
+  "name": "@sce/core",
   "version": "0.0.1",
-  "private": false,
+  "private": "false",
   "description": "An open semantic layer enabling LLM-native communication protocols",
   "scripts": {
     "build": "tsc -b",

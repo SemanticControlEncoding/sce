@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=24.0.0"
   },
-  "private": false,
+  "private": "false",
   "description": "An open semantic layer enabling LLM-native communication protocols",
   "bin": {
     "sce": "dist/cli.js",
