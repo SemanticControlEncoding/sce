@@ -1,7 +1,10 @@
 {
   "name": "@sce/core",
   "version": "0.0.1",
-  "private": true,
+  "type": "module",
+  "bin": {
+    "sce": "dist/cli.js"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

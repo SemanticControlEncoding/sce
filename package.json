@@ -6,7 +6,8 @@
     "test": "pnpm -w -r --filter ./packages/**/ts test",
     "lint": "pnpm -w -r --filter ./packages/**/ts lint",
     "clean:build": "pnpm -w -r --filter ./packages/**/ts exec -- rimraf dist .tsbuildinfo",
-    "build:force": "pnpm -w -r --filter ./packages/**/ts exec -- tsc -b --force"
+    "build:force": "pnpm -w -r --filter ./packages/**/ts exec -- tsc -b --force",
+    "docs": "mkdocs serve"
   },
   "devDependencies": {
     "@types/jest": "^29.5.3",
@@ -22,6 +23,6 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.22.0",
     "rimraf": "^6.1.0",
-    "zod": "^4.1.12"
+    "zod": "3.25.76"
   }
 }
