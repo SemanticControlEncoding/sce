@@ -1,7 +1,7 @@
 /**
  * @module ontology
  * @description
- * Defines the canonical Semantic Control Encoding (SCE) ontology schema.
+ * Defines the canonical Semantic Communication Encoding (SCE) ontology schema.
  *
  * This module contains {@link SemanticOntologySchema}, a comprehensive, structured
  * vocabulary of emoji-based semantic symbols organized into eight categories:
@@ -30,7 +30,7 @@
  *
  * @example
  * ```typescript
- * import { SemanticOntologySchema } from '@sce/core';
+ * import { SemanticOntologySchema } from '@semanticencoding/core';
  *
  * // Access category definitions
  * const analyzeSymbol = SemanticOntologySchema.reasoning.analyze;
@@ -50,7 +50,7 @@
 import type { SceOntologyBase } from "./types";
 
 /**
- * The canonical SCE (Semantic Control Encoding) ontology schema.
+ * The canonical SCE (Semantic Communication Encoding) ontology schema.
  *
  * This constant defines the complete vocabulary of emoji-based semantic symbols
  * used for structured communication in legal, educational, and compliance contexts.
@@ -74,7 +74,7 @@ import type { SceOntologyBase } from "./types";
  *
  * @example
  * ```typescript
- * import { SemanticOntologySchema } from '@sce/core';
+ * import { SemanticOntologySchema } from '@semanticencoding/core';
  *
  * // Type-safe category access
  * const reasoning = SemanticOntologySchema.reasoning;

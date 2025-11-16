@@ -11,9 +11,6 @@ export type {
   SceOntologyEmojiMap,
   SceOntologyCategoryEmojiMap,
   SceOntologyEmoji,
-} from "./types";
-
-export type {
   SemanticOntology,
   SemanticOntologyCategoryKey,
   SemanticOntologyDefinitionType,
@@ -26,19 +23,15 @@ export type {
   SemanticOntologyStateEmoji,
   SemanticOntologyControlEmoji,
   SemanticOntologyEmoji,
-} from "./ontology-types";
+} from "@semanticencoding/core";
 
-export type { SceLog } from "./log";
+export { SemanticOntologySchema } from "@semanticencoding/core";
 
-export { log } from "./log";
-
-export { SemanticOntologySchema } from "./ontology";
-
-export { validateOntology } from "./validator";
+export { validateOntology } from "@semanticencoding/core";
 
 export {
   interpreter,
   getDefinitionsForEmojis,
   extractEmojisFromText,
   getDefinitionsFromText,
-} from "./interpreter";
+} from "@semanticencoding/core";

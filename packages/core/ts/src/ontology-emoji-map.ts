@@ -13,7 +13,7 @@
  *
  * @example
  * ```typescript
- * import { SemanticOntologyEmojiMap, buildEmojiMap } from '@sce/core';
+ * import { SemanticOntologyEmojiMap, buildEmojiMap } from '@semanticencoding/core';
  *
  * // Use the default emoji map
  * const analyzeEmoji = SemanticOntologyEmojiMap.reasoning.analyze; // "🔍"
@@ -64,7 +64,7 @@ export type { SemanticOntologyEmojiMapType };
  *
  * @example
  * ```typescript
- * import { buildEmojiMap } from '@sce/core';
+ * import { buildEmojiMap } from '@semanticencoding/core';
  *
  * const emojiMap = buildEmojiMap(SemanticOntologySchema);
  * console.log(emojiMap.reasoning.analyze); // "🔍"
@@ -108,7 +108,7 @@ export const buildEmojiMap = <T extends SceOntologyBase>(
  *
  * @example
  * ```typescript
- * import { SemanticOntologyEmojiMap } from '@sce/core';
+ * import { SemanticOntologyEmojiMap } from '@semanticencoding/core';
  *
  * // Access emojis by category and key
  * const analyzeEmoji = SemanticOntologyEmojiMap.reasoning.analyze;     // "🔍"

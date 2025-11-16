@@ -1,7 +1,7 @@
 /**
  * @module interpreter
  * @description
- * Provides runtime interpretation and lookup services for SCE (Semantic Control Encoding) ontologies.
+ * Provides runtime interpretation and lookup services for SCE (Semantic Communication Encoding) ontologies.
  *
  * This module allows you to:
  * - Build an emoji-to-definition index from any ontology conforming to {@link SceOntologyBase}
@@ -14,7 +14,7 @@
  *
  * @example
  * ```typescript
- * import { interpreter, getDefinitionsFromText } from '@sce/core';
+ * import { interpreter, getDefinitionsFromText } from '@semanticencoding/core';
  *
  * // Use the default interpreter
  * const defs = getDefinitionsFromText('Review 🔍 the findings.');
@@ -279,7 +279,7 @@ export const interpreter: InterpreterOverloads = <
  *
  * @example
  * ```typescript
- * import { getDefinitionsForEmojis } from '@sce/core';
+ * import { getDefinitionsForEmojis } from '@semanticencoding/core';
  *
  * const defs = getDefinitionsForEmojis(['🔍', '📌']);
  * console.log(defs.map(d => d.meaning));
@@ -300,7 +300,7 @@ export const getDefinitionsForEmojis = (emojis: SemanticOntologyEmoji[]) =>
  *
  * @example
  * ```typescript
- * import { extractEmojisFromText } from '@sce/core';
+ * import { extractEmojisFromText } from '@semanticencoding/core';
  *
  * const emojis = extractEmojisFromText('Review 🔍 the evidence and document 📝 findings.');
  * console.log(emojis); // ['🔍', '📝']
@@ -320,7 +320,7 @@ export const extractEmojisFromText = (text: string) =>
  *
  * @example
  * ```typescript
- * import { getDefinitionsFromText } from '@sce/core';
+ * import { getDefinitionsFromText } from '@semanticencoding/core';
  *
  * const defs = getDefinitionsFromText('Task 📝 is pending ⏳ and requires review 🔍.');
  * defs.forEach(def => console.log(`${def.emoji}: ${def.meaning}`));

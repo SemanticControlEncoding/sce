@@ -2,7 +2,7 @@
 /**
  * @module cli
  * @description
- * Command-line interface for the SCE (Semantic Control Encoding) system.
+ * Command-line interface for the SCE (Semantic Communication Encoding) system.
  *
  * This CLI tool enables users to extract and inspect SCE emoji symbols from freeform text
  * via the command line, supporting both interactive and piped workflows.
@@ -38,8 +38,7 @@
  * ```
  */
 
-import { getDefinitionsFromText } from "./interpreter.js";
-import { log } from "./log.js";
+import { getDefinitionsFromText, log } from "@semanticencoding/core";
 
 /**
  * Output format options for CLI display.

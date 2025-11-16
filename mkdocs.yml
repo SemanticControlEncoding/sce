@@ -1,8 +1,8 @@
 site_name: Semantic Communication Encoding (SCE)
 site_description: "A small, governed emoji ontology for humans, tools, and LLMs."
-site_url: https://github.com/SemanticControlEncoding/sce
-repo_name: SemanticControlEncoding/sce
-repo_url: https://github.com/SemanticControlEncoding/sce
+site_url: https://github.com/SemanticEncoding/sce
+repo_name: SemanticEncoding/sce
+repo_url: https://github.com/SemanticEncoding/sce
 
 theme:
   name: material
@@ -51,5 +51,5 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/SemanticControlEncoding/sce
+      link: https://github.com/SemanticEncoding/sce
       name: SCE on GitHub
