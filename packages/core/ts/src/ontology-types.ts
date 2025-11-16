@@ -18,7 +18,7 @@
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyEmoji, SemanticOntologyReasoningEmoji } from '@sce/core';
+ * import type { SemanticOntologyEmoji, SemanticOntologyReasoningEmoji } from '@semanticencoding/core';
  *
  * // Type-safe emoji variables
  * const analyze: SemanticOntologyEmoji = "🔍";
@@ -52,7 +52,7 @@ import type {
  *
  * @example
  * ```typescript
- * import type { SemanticOntology } from '@sce/core';
+ * import type { SemanticOntology } from '@semanticencoding/core';
  *
  * function validateOntology(ontology: SemanticOntology) {
  *   // Type-safe access to categories
@@ -73,7 +73,7 @@ export type SemanticOntology = typeof SemanticOntologySchema;
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyCategoryKey } from '@sce/core';
+ * import type { SemanticOntologyCategoryKey } from '@semanticencoding/core';
  *
  * const categoryKey: SemanticOntologyCategoryKey = "reasoning";
  * // categoryKey = "invalid"; // TypeScript error
@@ -92,7 +92,7 @@ export type SemanticOntologyCategoryKey =
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyDefinitionType } from '@sce/core';
+ * import type { SemanticOntologyDefinitionType } from '@semanticencoding/core';
  *
  * type ReasoningDefs = SemanticOntologyDefinitionType<"reasoning">;
  * // ReasoningDefs = { analyze: {...}, insight: {...}, investigate: {...} }
@@ -116,7 +116,7 @@ export type SemanticOntologyDefinitionType<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyEmojiMapType } from '@sce/core';
+ * import type { SemanticOntologyEmojiMapType } from '@semanticencoding/core';
  *
  * const emojiMap: SemanticOntologyEmojiMapType = {
  *   reasoning: { analyze: "🔍", insight: "🧠", investigate: "🕵️" },
@@ -140,7 +140,7 @@ export type SemanticOntologyEmojiMapType =
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyStructureEmoji } from '@sce/core';
+ * import type { SemanticOntologyStructureEmoji } from '@semanticencoding/core';
  *
  * const sectionEmoji: SemanticOntologyStructureEmoji = "🗂️";
  * const pinnedEmoji: SemanticOntologyStructureEmoji = "📌";
@@ -162,7 +162,7 @@ export type SemanticOntologyStructureEmoji = SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyLegalPolicyEmoji } from '@sce/core';
+ * import type { SemanticOntologyLegalPolicyEmoji } from '@semanticencoding/core';
  *
  * const lawEmoji: SemanticOntologyLegalPolicyEmoji = "⚖️";
  * const citationEmoji: SemanticOntologyLegalPolicyEmoji = "📜";
@@ -183,7 +183,7 @@ export type SemanticOntologyLegalPolicyEmoji = SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyReasoningEmoji } from '@sce/core';
+ * import type { SemanticOntologyReasoningEmoji } from '@semanticencoding/core';
  *
  * const analyzeEmoji: SemanticOntologyReasoningEmoji = "🔍";
  * const insightEmoji: SemanticOntologyReasoningEmoji = "🧠";
@@ -204,7 +204,7 @@ export type SemanticOntologyReasoningEmoji = SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyTasksEmoji } from '@sce/core';
+ * import type { SemanticOntologyTasksEmoji } from '@semanticencoding/core';
  *
  * const actionEmoji: SemanticOntologyTasksEmoji = "📝";
  * const completeEmoji: SemanticOntologyTasksEmoji = "✅";
@@ -225,7 +225,7 @@ export type SemanticOntologyTasksEmoji = SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyPrivacyEmoji } from '@sce/core';
+ * import type { SemanticOntologyPrivacyEmoji } from '@semanticencoding/core';
  *
  * const privateEmoji: SemanticOntologyPrivacyEmoji = "🔐";
  * const authorizedEmoji: SemanticOntologyPrivacyEmoji = "🗝️";
@@ -246,7 +246,7 @@ export type SemanticOntologyPrivacyEmoji = SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyActorsEmoji } from '@sce/core';
+ * import type { SemanticOntologyActorsEmoji } from '@semanticencoding/core';
  *
  * const studentEmoji: SemanticOntologyActorsEmoji = "🧑‍🎓";
  * const organizationEmoji: SemanticOntologyActorsEmoji = "🏢";
@@ -267,7 +267,7 @@ export type SemanticOntologyActorsEmoji = SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyStateEmoji } from '@sce/core';
+ * import type { SemanticOntologyStateEmoji } from '@semanticencoding/core';
  *
  * const pendingEmoji: SemanticOntologyStateEmoji = "⏳";
  * const warningEmoji: SemanticOntologyStateEmoji = "⚠️";
@@ -288,7 +288,7 @@ export type SemanticOntologyStateEmoji = SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyControlEmoji } from '@sce/core';
+ * import type { SemanticOntologyControlEmoji } from '@semanticencoding/core';
  *
  * const decisionEmoji: SemanticOntologyControlEmoji = "🔀";
  * const nextEmoji: SemanticOntologyControlEmoji = "⏭️";
@@ -310,7 +310,7 @@ export type SemanticOntologyControlEmoji = SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SemanticOntologyEmoji } from '@sce/core';
+ * import type { SemanticOntologyEmoji } from '@semanticencoding/core';
  *
  * // Any valid emoji from the default ontology
  * const emojis: SemanticOntologyEmoji[] = ["🔍", "📝", "👤", "⏳"];

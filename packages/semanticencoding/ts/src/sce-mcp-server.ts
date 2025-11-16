@@ -3,7 +3,7 @@
 /**
  * @module sce-mcp-server
  * @description
- * Model Context Protocol (MCP) server implementation for SCE (Semantic Control Encoding).
+ * Model Context Protocol (MCP) server implementation for SCE (Semantic Communication Encoding).
  *
  * This server exposes SCE functionality via the MCP protocol, enabling AI assistants
  * and other MCP clients to extract, validate, and suggest semantic symbols from text.
@@ -50,8 +50,10 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 
 // Adjust these imports to your layout
-import { getDefinitionsFromText } from "./interpreter.js";
-import { validateOntology } from "./validator.js";
+import {
+  getDefinitionsFromText,
+  validateOntology,
+} from "@semanticencoding/core";
 
 /**
  * Zod schema for output format configuration.

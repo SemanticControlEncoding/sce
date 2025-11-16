@@ -1,7 +1,7 @@
 /**
  * @module log
  * @description
- * Lightweight logging utility for SCE (Semantic Control Encoding).
+ * Lightweight logging utility for SCE (Semantic Communication Encoding).
  *
  * This module provides a simple, standardized logging interface that wraps
  * the native `console` object. It enables consistent logging patterns across

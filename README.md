@@ -78,7 +78,7 @@ interface SceSymbolDefinition {
 Import the interpreter:
 
 ```ts
-import { interpreter, getDefinitionsFromText } from "@sce/core";
+import { interpreter, getDefinitionsFromText } from "@semanticencoding/core";
 ```
 
 ### Extract meaning from free-form text
@@ -109,7 +109,7 @@ Validate your ontology instance to ensure:
 - allowedContext values are valid
 
 ```ts
-import { validateOntology } from "@sce/core";
+import { validateOntology } from "@semanticencoding/core";
 
 console.log(validateOntology());
 // → [] if no issues
@@ -122,7 +122,7 @@ console.log(validateOntology());
 Useful when embedding semantic references in front-end UIs or prompts:
 
 ```ts
-import { SemanticOntologyEmojiMap } from "@sce/core";
+import { SemanticOntologyEmojiMap } from "@semanticencoding/core";
 
 console.log(SemanticOntologyEmojiMap.tasks);
 // → { action: '📝', todo: '☐', complete: '✅', ... }
@@ -135,7 +135,7 @@ console.log(SemanticOntologyEmojiMap.tasks);
 SCE is intentionally modular and can be extended or forked:
 
 ```ts
-import { interpreter } from "@sce/core";
+import { interpreter } from "@semanticencoding/core";
 
 const CustomOntology = {
   ...SemanticOntologySchema,

@@ -1,0 +1,84 @@
+
+# SCE Ethical Use License (Draft v0.1)
+
+This project, **SCE — Semantic Communication Encoding**, is released under an **Ethical Open Use License**.
+
+You are free to use, modify, distribute, and incorporate this work **as long as your usage complies with the following terms**.
+
+---
+
+## ✅ Permitted Uses
+
+You MAY use this software and its contents for:
+
+- Research, education, and accessibility purposes  
+- Compliance, safety, accountability, transparency, and auditing workflows  
+- AI-assisted reasoning, communication improvement, and tooling  
+- Open-source software and public-interest projects  
+- Commercial applications **so long as they do not violate the restrictions below**
+
+---
+
+## 🚫 Prohibited Uses
+
+You may **NOT** use this project or any derivative works for:
+
+- Surveillance, profiling, or coercive monitoring of students, employees, or protected classes  
+- Any system intended to suppress reporting, obstruct accountability processes, or weaken rights granted under laws such as:
+  - Title IX  
+  - FERPA  
+  - ADA  
+  - Civil Rights Act  
+  - GDPR  
+  - UN Universal Declaration of Human Rights  
+- Weaponization of AI for social control, discrimination, harassment, disinformation, or harm  
+- Use by institutions or vendors attempting to avoid legal compliance, reporting mandates, or safety obligations
+
+If you're unsure whether your usage violates these terms, **stop and seek clarification** via the governance channel (to be established).
+
+---
+
+## 📌 Attribution
+
+You must provide visible attribution:
+
+```
+Uses SCE — Semantic Communication Encoding (https://github.com/<future-url>)
+Licensed under the SCE Ethical Use License.
+```
+
+---
+
+## 🔁 Modifications and Forks
+
+Forks and modifications must:
+
+- Preserve this license or a more restrictive compatible license  
+- Document substantive changes  
+
+---
+
+## ⚖ Enforcement
+
+Violation of this license **terminates all rights granted**, effective immediately.
+
+A community governance body will be formed to:
+
+- Review misuse claims
+- Approve license amendments
+- Steward the long-term ethical intent of the standard
+
+---
+
+## 🧠 Intent
+
+This license exists to ensure that **AI augments human rights, safety, transparency, and dignity — not erodes them.**
+
+If this aligns with your values:
+
+> Welcome. Build boldly and responsibly.
+
+If not:
+
+> You may not use this work.
+

@@ -89,7 +89,7 @@ SCE ships with a complete “stack”:
 
 ```bash
 # once published
-npm install @sce/core
+npm install @semanticencoding/core
 
 # or from a cloned repo
 npm install .
@@ -98,7 +98,7 @@ npm install .
 ### 2. Interpret symbols in text
 
 ```ts
-import { getDefinitionsFromText } from "@sce/core";
+import { getDefinitionsFromText } from "@semanticencoding/core";
 
 const text =
   "📌 First report was on 2024-11-06. ⏳ Investigation is still pending. ⚠️ Parent has raised safety concerns.";
@@ -122,7 +122,7 @@ console.log(defs[0]);
 ### 3. Validate the ontology
 
 ```ts
-import { validateOntology } from "@sce/core";
+import { validateOntology } from "@semanticencoding/core";
 
 const issues = validateOntology();
 if (issues.length > 0) {
@@ -176,7 +176,7 @@ Each tool supports a structured `format` override:
 - 🔌 [MCP integration](mcp.md) – using SCE with MCP-aware tools
 - 🤝 [Contributing & Governance](CONTRIBUTING.md) – RFCs, symbol proposals, ethics
 - 🛣️ [Roadmap](ROADMAP.md) - Where we're going next
-- [Repository](https://github.com/SemanticControlEncoding/sce) - Where we are right now
+- [Repository](https://github.com/SemanticEncoding/sce) - Where we are right now
 
 ---
 

@@ -3,12 +3,9 @@ import type { OutputFormat } from "../src/sce-mcp-server";
 const mockGetDefinitionsFromText = jest.fn();
 const mockValidateOntology = jest.fn();
 
-jest.mock("../src/interpreter.js", () => ({
+jest.mock("@semanticencoding/core", () => ({
   getDefinitionsFromText: (...args: unknown[]) =>
     mockGetDefinitionsFromText(...args),
-}));
-
-jest.mock("../src/validator.js", () => ({
   validateOntology: () => mockValidateOntology(),
 }));
 

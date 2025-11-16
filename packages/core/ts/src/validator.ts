@@ -24,7 +24,7 @@
  *
  * @example
  * ```typescript
- * import { validateOntology, SemanticOntologySchema } from '@sce/core';
+ * import { validateOntology, SemanticOntologySchema } from '@semanticencoding/core';
  *
  * // Validate the default ontology
  * const errors = validateOntology();
@@ -74,7 +74,7 @@ import type {
  *
  * @example
  * ```typescript
- * import { validateOntology } from '@sce/core';
+ * import { validateOntology } from '@semanticencoding/core';
  *
  * // Validate default ontology
  * const errors = validateOntology();
@@ -123,7 +123,7 @@ import type {
  * @example
  * ```typescript
  * // Use in testing
- * import { validateOntology, SemanticOntologySchema } from '@sce/core';
+ * import { validateOntology, SemanticOntologySchema } from '@semanticencoding/core';
  *
  * test('ontology is valid', () => {
  *   const errors = validateOntology(SemanticOntologySchema);

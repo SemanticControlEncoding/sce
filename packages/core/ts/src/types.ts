@@ -1,7 +1,7 @@
 /**
  * @module types
  * @description
- * Core TypeScript type definitions for the SCE (Semantic Control Encoding) system.
+ * Core TypeScript type definitions for the SCE (Semantic Communication Encoding) system.
  *
  * This module provides the foundational type system that supports the SCE ontology framework,
  * including:
@@ -25,7 +25,7 @@
  *   SceOntologyBase,
  *   SceSymbolDefinition,
  *   SceOntologyEmoji
- * } from '@sce/core';
+ * } from '@semanticencoding/core';
  *
  * // Define a custom ontology with full type safety
  * const myOntology = {
@@ -262,7 +262,7 @@ export interface SceOntologyBase {
  *
  * @example
  * ```typescript
- * import type { SceOntologyCategoryKey, SceOntologyBase } from '@sce/core';
+ * import type { SceOntologyCategoryKey, SceOntologyBase } from '@semanticencoding/core';
  *
  * type CategoryKeys = SceOntologyCategoryKey<SceOntologyBase>;
  * // "structure" | "legalPolicy" | "reasoning" | ...
@@ -286,8 +286,8 @@ export type SceOntologyCategoryKey<
  *
  * @example
  * ```typescript
- * import type { SceOntologyCategoryDefinitionType } from '@sce/core';
- * import { SemanticOntologySchema } from '@sce/core';
+ * import type { SceOntologyCategoryDefinitionType } from '@semanticencoding/core';
+ * import { SemanticOntologySchema } from '@semanticencoding/core';
  *
  * type ReasoningDefs = SceOntologyCategoryDefinitionType<
  *   typeof SemanticOntologySchema,
@@ -317,8 +317,8 @@ export type SceOntologyCategoryDefinitionType<
  *
  * @example
  * ```typescript
- * import type { SceOntologyEmojiMap } from '@sce/core';
- * import { SemanticOntologySchema } from '@sce/core';
+ * import type { SceOntologyEmojiMap } from '@semanticencoding/core';
+ * import { SemanticOntologySchema } from '@semanticencoding/core';
  *
  * type EmojiMap = SceOntologyEmojiMap<typeof SemanticOntologySchema>;
  * // {
@@ -358,8 +358,8 @@ export type SceOntologyEmojiMap<TOntology extends SceOntologyBase> = {
  *
  * @example
  * ```typescript
- * import type { SceOntologyCategoryEmojiMap } from '@sce/core';
- * import { SemanticOntologySchema } from '@sce/core';
+ * import type { SceOntologyCategoryEmojiMap } from '@semanticencoding/core';
+ * import { SemanticOntologySchema } from '@semanticencoding/core';
  *
  * type CategoryEmojiMap = SceOntologyCategoryEmojiMap<typeof SemanticOntologySchema>;
  * // {
@@ -386,8 +386,8 @@ export type SceOntologyCategoryEmojiMap<TOntology extends SceOntologyBase> = {
  *
  * @example
  * ```typescript
- * import type { SceOntologyCategoryEmoji } from '@sce/core';
- * import { SemanticOntologySchema } from '@sce/core';
+ * import type { SceOntologyCategoryEmoji } from '@semanticencoding/core';
+ * import { SemanticOntologySchema } from '@semanticencoding/core';
  *
  * type ReasoningEmoji = SceOntologyCategoryEmoji<
  *   typeof SemanticOntologySchema,
@@ -416,8 +416,8 @@ export type SceOntologyCategoryEmoji<
  *
  * @example
  * ```typescript
- * import type { SceOntologyEmoji } from '@sce/core';
- * import { SemanticOntologySchema } from '@sce/core';
+ * import type { SceOntologyEmoji } from '@semanticencoding/core';
+ * import { SemanticOntologySchema } from '@semanticencoding/core';
  *
  * type AnyEmoji = SceOntologyEmoji<typeof SemanticOntologySchema>;
  * // "🔍" | "🧠" | "🕵️" | "📝" | "☐" | "✅" | "👤" | "⏳" | ... (all emojis)
@@ -453,7 +453,7 @@ export type SceOntologyEmoji<TOntology extends SceOntologyBase> =
  *
  * @example
  * ```typescript
- * import type { OntologyInterpreter, SceOntologyBase } from '@sce/core';
+ * import type { OntologyInterpreter, SceOntologyBase } from '@semanticencoding/core';
  *
  * class MyInterpreter<T extends SceOntologyBase>
  *   implements OntologyInterpreter<T>
