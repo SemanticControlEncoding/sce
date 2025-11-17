@@ -1,6 +1,6 @@
 {
   "name": "@semanticencoding/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "commonjs",
   "engines": {
     "node": ">=24.0.0"
