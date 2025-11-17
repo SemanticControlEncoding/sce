@@ -4,8 +4,16 @@ const tsEslintPlugin = require("@typescript-eslint/eslint-plugin");
 module.exports = [
   ...rootConfig,
   {
-    files: ["**/*.ts"],
-    ignores: ["node_modules/**", "dist/**", ".tsbuildinfo", "tests/**"],
+    ignores: [
+      "node_modules/**/*",
+      "dist/**/*",
+      ".tsbuildinfo",
+      "tests/**/*",
+      "coverage/**/*",
+    ],
+  },
+  {
+    files: ["src/**/*.ts"],
     languageOptions: {
       parser: require("@typescript-eslint/parser"),
       parserOptions: {

@@ -66,7 +66,7 @@ Each symbol belongs to **exactly one domain**.
 ### Importing the ontology
 
 ```ts
-import { SemanticOntology } from "@semanticencoding/core";
+import { SemanticOntology } from "semanticencoding";
 
 console.log(SemanticOntology.structure.pinned);
 /*
@@ -89,7 +89,7 @@ console.log(SemanticOntology.structure.pinned);
 ### Extract symbol definitions from text
 
 ```ts
-import { getDefinitionsFromText } from "@semanticencoding/core";
+import { getDefinitionsFromText } from "semanticencoding";
 
 const result = getDefinitionsFromText("⚠️ Issue ⏳ still unresolved");
 console.log(result);
@@ -98,7 +98,7 @@ console.log(result);
 ### Validate ontology
 
 ```ts
-import { validateOntology } from "@semanticencoding/core";
+import { validateOntology } from "semanticencoding";
 
 const issues = validateOntology();
 if (issues.length > 0) {
@@ -109,7 +109,7 @@ if (issues.length > 0) {
 ### Suggest symbols
 
 ```ts
-import { suggestSymbols } from "@semanticencoding/core";
+import { suggestSymbols } from "semanticencoding";
 
 console.log(suggestSymbols("requires follow-up and pending review"));
 ```

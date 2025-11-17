@@ -1,19 +1,22 @@
 {
   "name": "@semanticencoding/monorepo",
+  "description": "Monorepo root for an open semantic layer enabling LLM-native communication protocols.  Not for distribution.",
   "private": true,
   "version": "0.0.1",
-  "description": "An open semantic layer enabling LLM-native communication protocols",
   "scripts": {
     "build": "tsc -b",
+    "copy-shared": "node ./scripts/copy-shared-to-packages.js",
     "test": "pnpm -w -r --filter ./packages/**/ts test",
     "test:cover": "pnpm -w -r --filter ./packages/**/ts test:cover",
     "lint": "pnpm -w -r --filter ./packages/**/ts lint",
     "publish:all": "pnpm -r --filter ./packages/**/ts publish --access public",
+    "pack:dry": "pnpm -r pack --json",
     "clean:build": "pnpm -w -r --filter ./packages/**/ts exec -- rimraf dist .tsbuildinfo",
     "build:force": "pnpm -w -r --filter ./packages/**/ts exec -- tsc -b --force",
     "docs": "mkdocs serve"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "@types/jest": "^29.5.3",
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^8.46.4",
@@ -25,7 +28,6 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.9.3"
   },
-  "dependencies": {},
   "license": "EthicalUse-1.0",
   "repository": {
     "type": "git",

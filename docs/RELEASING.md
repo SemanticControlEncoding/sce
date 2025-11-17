@@ -42,3 +42,12 @@ git push origin vX.Y.Z
 
 - [ ] Verify [docs](https://semanticcontrolengine.github.io/sce)
 - [ ] Verify MCP server works with the new version (ideally before release...)
+- [ ] If one hasn't already been selected, pick a code-name for the next release. Codenames should be 2 words and are under no obligation to have anything to do with the capabilites that reslease will add. Some examples include:
+  - Eternal Vigilance - grandiose surveillance energy
+  - Infinite Wisdom - laughably overconfident
+  - Resolute Compass - sounds decisive but probably lost
+  - Crimson Phoenix - unnecessarily dramatic rebirth
+  - Steadfast Glacier - oxymoronic slow-moving determination
+  - Noble Serpent - trying too hard to sound cool
+  - Valiant Echo - brave repetition of past mistakes
+  - Solemn Falcon - taking itself way too seriously

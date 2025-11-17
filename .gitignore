@@ -11,3 +11,9 @@ coverage/
 # pnpm
 node_modules/
 node_modules
+
+# Temporary files created during packaging
+packages/core/ts/README.md
+packages/semanticencoding/ts/README.md
+packages/*/ts/*.tgz
+./*.tgz

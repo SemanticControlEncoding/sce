@@ -19,6 +19,15 @@ SCE solves that problem by providing:
 - A **validation layer** to ensure semantic consistency
 - A **lookup and extraction API** for tool builders
 
+**The core benefit:** Replace verbose natural language with compact semantic symbols:
+
+**Before:** "This is a non-negotiable fact that must remain true..." (28 tokens)  
+**After:** `📌 Student was injured on 11/06/24` (2 tokens for the symbol)
+
+**Result: ~93% token reduction** + increased semantic precision.
+
+👉 See the [**Prompting Guide**](docs/PROMPTING.md) for detailed token savings analysis and examples.
+
 This makes semantic signals:
 
 - **Readable by humans**
@@ -29,14 +38,16 @@ This makes semantic signals:
 
 ## 📦 Core Features
 
-| Capability                                       |    Supported     |
-| ------------------------------------------------ | :--------------: |
-| Extract emojis from text                         |        ✅        |
-| Map emojis → formal definition                   |        ✅        |
-| Validate ontology uniqueness & structure         |        ✅        |
-| Use ontology programmatically (TypeScript types) |        ✅        |
-| Generate emoji → meaning lookup table            |        ✅        |
-| Extend or replace the ontology                   | 🔧 Yes (modular) |
+| Capability                                       |    Supported     | Documentation                        |
+| ------------------------------------------------ | :--------------: | ------------------------------------ |
+| Extract emojis from text                         |        ✅        | [CLI](docs/CLI.md)                   |
+| Map emojis → formal definition                   |        ✅        | [API](docs/ONTOLOGY-API.md)          |
+| Validate ontology uniqueness & structure         |        ✅        | [API](docs/ONTOLOGY-API.md)          |
+| Use ontology programmatically (TypeScript types) |        ✅        | [API](docs/ONTOLOGY-API.md)          |
+| MCP server for LLM integration                   |        ✅        | [MCP](docs/MCP.md)                   |
+| CLI for terminal workflows                       |        ✅        | [CLI](docs/CLI.md)                   |
+| Generate emoji → meaning lookup table            |        ✅        | [API](docs/ONTOLOGY-API.md)          |
+| Extend or replace the ontology                   | 🔧 Yes (modular) | [Contributing](docs/CONTRIBUTING.md) |
 
 ---
 
@@ -78,7 +89,7 @@ interface SceSymbolDefinition {
 Import the interpreter:
 
 ```ts
-import { interpreter, getDefinitionsFromText } from "@semanticencoding/core";
+import { interpreter, getDefinitionsFromText } from "semanticencoding";
 ```
 
 ### Extract meaning from free-form text
@@ -109,7 +120,7 @@ Validate your ontology instance to ensure:
 - allowedContext values are valid
 
 ```ts
-import { validateOntology } from "@semanticencoding/core";
+import { validateOntology } from "semanticencoding";
 
 console.log(validateOntology());
 // → [] if no issues
@@ -122,7 +133,7 @@ console.log(validateOntology());
 Useful when embedding semantic references in front-end UIs or prompts:
 
 ```ts
-import { SemanticOntologyEmojiMap } from "@semanticencoding/core";
+import { SemanticOntologyEmojiMap } from "semanticencoding";
 
 console.log(SemanticOntologyEmojiMap.tasks);
 // → { action: '📝', todo: '☐', complete: '✅', ... }
@@ -135,7 +146,7 @@ console.log(SemanticOntologyEmojiMap.tasks);
 SCE is intentionally modular and can be extended or forked:
 
 ```ts
-import { interpreter } from "@semanticencoding/core";
+import { interpreter } from "semanticencoding";
 
 const CustomOntology = {
   ...SemanticOntologySchema,
@@ -192,7 +203,8 @@ SCE aims to become **an open semantic layer** enabling LLM-native communication 
 
 ## 🤝 Contributing
 
-Contribution guidelines and governance will be defined in future revisions.
+Contribution guidelines and governance are available [online](https://semanticencoding.github.io/sce/CONTRIBUTING/) or
+in the repository documentation - [CONTRIBUTING](docs/CONTRIBUTING.md) [GOVERNANCE](docs/GOVERNANCE.md)
 
 Initial plans include:
 
@@ -230,4 +242,4 @@ Initial plans include:
 
 You are looking at a **working draft of a standard**.
 
-If this resonates — help shape it.
+If this resonates — help shape it. More information is available [online](https://semanticencoding.github.io/sce) and at our [repository](https://github.com/SemanticEncoding/sce).
