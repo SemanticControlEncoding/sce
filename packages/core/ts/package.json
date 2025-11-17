@@ -1,22 +1,43 @@
 {
   "name": "@semanticencoding/core",
   "version": "0.0.1",
-  "type": "module",
+  "type": "commonjs",
   "engines": {
     "node": ">=24.0.0"
   },
-  "description": "An open semantic layer enabling LLM-native communication protocols - core types and implementation",
+  "description": "An open semantic layer enabling LLM-native communication protocols.  This is the core package providing foundational types, programatic utilities, and interfaces to use with Semantic Communication Encoding (SCE).  It's primary audience is to facilitate the development of SCE ecosystem tooling.  If you want to use SCE in your project, the semanticencoding package is a better fit.",
+  "keywords": [
+    "MCP",
+    "LLM",
+    "prompts",
+    "semantic",
+    "encoding",
+    "SCE",
+    "Semantic Encoding",
+    "Semantic Communication Encoding"
+  ],
+  "author": {
+    "name": "Sean O'Brien",
+    "email": "seanmobrien@hotmail.com",
+    "url": "https://github.com/seanmobrien/"
+  },
+  "bugs": {
+    "url": "https://github.com/SemanticEncoding/sce/issues"
+  },
+  "homepage": "https://semanticencoding.github.io/sce/",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "EthicalUse-1.0",
   "files": [
     "dist/**/*",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "prepack": "node ../../../scripts/copy-shared-to-packages.js && tsc -b",
     "build": "tsc -b",
     "lint": "eslint --config ./eslint.config.cjs",
     "test": "jest --config ./jest.config.cjs",

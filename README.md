@@ -78,7 +78,7 @@ interface SceSymbolDefinition {
 Import the interpreter:
 
 ```ts
-import { interpreter, getDefinitionsFromText } from "@semanticencoding/core";
+import { interpreter, getDefinitionsFromText } from "semanticencoding";
 ```
 
 ### Extract meaning from free-form text
@@ -109,7 +109,7 @@ Validate your ontology instance to ensure:
 - allowedContext values are valid
 
 ```ts
-import { validateOntology } from "@semanticencoding/core";
+import { validateOntology } from "semanticencoding";
 
 console.log(validateOntology());
 // → [] if no issues
@@ -122,7 +122,7 @@ console.log(validateOntology());
 Useful when embedding semantic references in front-end UIs or prompts:
 
 ```ts
-import { SemanticOntologyEmojiMap } from "@semanticencoding/core";
+import { SemanticOntologyEmojiMap } from "semanticencoding";
 
 console.log(SemanticOntologyEmojiMap.tasks);
 // → { action: '📝', todo: '☐', complete: '✅', ... }
@@ -135,7 +135,7 @@ console.log(SemanticOntologyEmojiMap.tasks);
 SCE is intentionally modular and can be extended or forked:
 
 ```ts
-import { interpreter } from "@semanticencoding/core";
+import { interpreter } from "semanticencoding";
 
 const CustomOntology = {
   ...SemanticOntologySchema,
@@ -192,7 +192,8 @@ SCE aims to become **an open semantic layer** enabling LLM-native communication 
 
 ## 🤝 Contributing
 
-Contribution guidelines and governance will be defined in future revisions.
+Contribution guidelines and governance are available [online](https://semanticencoding.github.io/sce/CONTRIBUTING/) or
+in the repository documentation - [CONTRIBUTING](docs/CONTRIBUTING.md) [GOVERNANCE](docs/GOVERNANCE.md)
 
 Initial plans include:
 
@@ -230,4 +231,4 @@ Initial plans include:
 
 You are looking at a **working draft of a standard**.
 
-If this resonates — help shape it.
+If this resonates — help shape it. More information is available [online](https://semanticencoding.github.io/sce) and at our [repository](https://github.com/SemanticEncoding/sce).

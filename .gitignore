@@ -11,3 +11,7 @@ coverage/
 # pnpm
 node_modules/
 node_modules
+
+# README for published package inclusion
+packages/core/ts/README.md
+packages/semanticencoding/ts/README.md

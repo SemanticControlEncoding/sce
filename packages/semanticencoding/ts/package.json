@@ -1,26 +1,47 @@
 {
   "name": "semanticencoding",
   "version": "0.0.1",
-  "type": "module",
+  "type": "commonjs",
   "engines": {
     "node": ">=24.0.0"
   },
-  "description": "An open semantic layer enabling LLM-native communication protocols",
+  "description": "An open semantic layer enabling LLM-native communication protocols.  The goal is to facilitate the creation, manipulation, and interpretation of SCE symbols and messages in order to provide a standardized approach for high-density low-token communication.  This is the primary package for end-users, and provides access to both the SCE SDK as well as a CLI and local MCP server.",
+  "keywords": [
+    "MCP",
+    "LLM",
+    "prompts",
+    "semantic",
+    "encoding",
+    "SCE",
+    "Semantic Encoding",
+    "Semantic Communication Encoding"
+  ],
+  "author": {
+    "name": "Sean O'Brien",
+    "email": "seanmobrien@hotmail.com",
+    "url": "https://github.com/seanmobrien/"
+  },
+  "bugs": {
+    "url": "https://github.com/SemanticEncoding/sce/issues"
+  },
+  "homepage": "https://semanticencoding.github.io/sce/",
   "bin": {
     "sce": "dist/cli.js",
-    "mcp": "dist/sce-mcp-server.js"
+    "sce-mcp": "dist/sce-mcp-server.js"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "EthicalUse-1.0",
   "files": [
     "dist/**/*",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "prepack": "node ../../../scripts/copy-shared-to-packages.js && tsc -b",
     "build": "tsc -b",
     "lint": "eslint --config ./eslint.config.cjs",
     "test": "jest --config ./jest.config.cjs",

@@ -89,7 +89,7 @@ SCE ships with a complete “stack”:
 
 ```bash
 # once published
-npm install @semanticencoding/core
+npm install semanticencoding
 
 # or from a cloned repo
 npm install .
@@ -98,7 +98,7 @@ npm install .
 ### 2. Interpret symbols in text
 
 ```ts
-import { getDefinitionsFromText } from "@semanticencoding/core";
+import { getDefinitionsFromText } from "semanticencoding";
 
 const text =
   "📌 First report was on 2024-11-06. ⏳ Investigation is still pending. ⚠️ Parent has raised safety concerns.";
@@ -122,7 +122,7 @@ console.log(defs[0]);
 ### 3. Validate the ontology
 
 ```ts
-import { validateOntology } from "@semanticencoding/core";
+import { validateOntology } from "semanticencoding";
 
 const issues = validateOntology();
 if (issues.length > 0) {

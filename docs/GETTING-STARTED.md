@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-npm install @semanticencoding/core
+npm install semanticencoding
 ```
 
 or from a local clone
@@ -19,10 +19,7 @@ npm install
 You can use SCE from Node or TypeScript applications.
 
 ```ts
-import {
-  getDefinitionsFromText,
-  validateOntology,
-} from "@semanticencoding/core";
+import { getDefinitionsFromText, validateOntology } from "semanticencoding";
 
 const text =
   "📌 First report was on 2024-11-06. ⏳ Investigation is still pending. ⚠️ Parent has raised safety concerns.";
@@ -65,7 +62,7 @@ SCE includes a built-in validator that checks whether the ontology is internally
 This is useful in CI, when extending the ontology, or before releasing updates.
 
 ```ts
-import { validateOntology } from "@semanticencoding/core";
+import { validateOntology } from "semanticencoding";
 
 const issues = validateOntology();
 
