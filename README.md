@@ -19,6 +19,15 @@ SCE solves that problem by providing:
 - A **validation layer** to ensure semantic consistency
 - A **lookup and extraction API** for tool builders
 
+**The core benefit:** Replace verbose natural language with compact semantic symbols:
+
+**Before:** "This is a non-negotiable fact that must remain true..." (28 tokens)  
+**After:** `📌 Student was injured on 11/06/24` (2 tokens for the symbol)
+
+**Result: ~93% token reduction** + increased semantic precision.
+
+👉 See the [**Prompting Guide**](docs/PROMPTING.md) for detailed token savings analysis and examples.
+
 This makes semantic signals:
 
 - **Readable by humans**
@@ -29,14 +38,16 @@ This makes semantic signals:
 
 ## 📦 Core Features
 
-| Capability                                       |    Supported     |
-| ------------------------------------------------ | :--------------: |
-| Extract emojis from text                         |        ✅        |
-| Map emojis → formal definition                   |        ✅        |
-| Validate ontology uniqueness & structure         |        ✅        |
-| Use ontology programmatically (TypeScript types) |        ✅        |
-| Generate emoji → meaning lookup table            |        ✅        |
-| Extend or replace the ontology                   | 🔧 Yes (modular) |
+| Capability                                       |    Supported     | Documentation                        |
+| ------------------------------------------------ | :--------------: | ------------------------------------ |
+| Extract emojis from text                         |        ✅        | [CLI](docs/CLI.md)                   |
+| Map emojis → formal definition                   |        ✅        | [API](docs/ONTOLOGY-API.md)          |
+| Validate ontology uniqueness & structure         |        ✅        | [API](docs/ONTOLOGY-API.md)          |
+| Use ontology programmatically (TypeScript types) |        ✅        | [API](docs/ONTOLOGY-API.md)          |
+| MCP server for LLM integration                   |        ✅        | [MCP](docs/MCP.md)                   |
+| CLI for terminal workflows                       |        ✅        | [CLI](docs/CLI.md)                   |
+| Generate emoji → meaning lookup table            |        ✅        | [API](docs/ONTOLOGY-API.md)          |
+| Extend or replace the ontology                   | 🔧 Yes (modular) | [Contributing](docs/CONTRIBUTING.md) |
 
 ---
 

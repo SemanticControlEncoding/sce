@@ -1,4 +1,4 @@
-# CONTRIBUTING — SCE (Semantic Communication Encoding)
+# Contributing — SCE (Semantic Communication Encoding)
 
 This document defines the contribution and change process for the SCE standard, associated ontology files, tooling, and supporting documentation.
 

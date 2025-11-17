@@ -1,8 +1,8 @@
 {
   "name": "@semanticencoding/monorepo",
+  "description": "Monorepo root for an open semantic layer enabling LLM-native communication protocols.  Not for distribution.",
   "private": true,
   "version": "0.0.1",
-  "description": "An open semantic layer enabling LLM-native communication protocols",
   "scripts": {
     "build": "tsc -b",
     "copy-shared": "node ./scripts/copy-shared-to-packages.js",

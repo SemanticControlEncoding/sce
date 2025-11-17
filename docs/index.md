@@ -45,7 +45,16 @@ Modern systems mix:
 - Roles and actors
 - Privacy & access rules
 
-SCE gives you a small, opinionated, **governed vocabulary** for those concepts:
+SCE gives you a small, opinionated, **governed vocabulary** for those concepts.
+
+**The key benefit?** Replace verbose natural language with precise semantic symbols:
+
+**Before:** "This is a non-negotiable fact that must remain true..." (28 tokens)  
+**After:** `📌 Student was injured on 11/06/24` (2 tokens for the symbol)
+
+**Result: ~93% token reduction** while _increasing_ semantic precision.
+
+See the [Prompting Guide](PROMPTING.md) for detailed examples and token savings analysis.
 
 | Domain      | Example symbols | Purpose                               |
 | ----------- | --------------- | ------------------------------------- |
@@ -78,8 +87,8 @@ SCE ships with a complete “stack”:
 - 🔎 **Interpreter** – emoji → JSON symbol definitions
 - ✅ **Validator** – checks for conflicts, duplicates, structural issues
 - 🧰 **TypeScript API** – drop-in library for your own tools
-- 🖥️ **CLI** – inspect symbols and validate the ontology from the terminal
-- 🔌 **MCP server** – stdio Model Context Protocol server exposing SCE tools
+- 🖥️ **[CLI](CLI.md)** – inspect symbols and validate the ontology from the terminal
+- 🔌 **[MCP server](MCP.md)** – stdio Model Context Protocol server exposing SCE tools
 
 ---
 
@@ -171,9 +180,11 @@ Each tool supports a structured `format` override:
 ## Learn more
 
 - 👉 [Getting started](GETTING-STARTED.md) – install, basic usage, examples
-- 📜 [Specification](SPEC.md) – SCE standard v1 (draft)
+- 🎯 [**Prompting Guide**](PROMPTING.md) – **token reduction & clarity benefits** ⭐
+- 🖥️ [CLI Reference](CLI.md) – command-line usage and workflows
+- 🔌 [MCP Integration](MCP.md) – using SCE with LLM clients and agents
 - 🧬 [Ontology & API](ONTOLOGY-API.md) – core symbol set & TypeScript types
-- 🔌 [MCP integration](mcp.md) – using SCE with MCP-aware tools
+- 📜 [Specification](SPEC.md) – SCE standard v1 (draft)
 - 🤝 [Contributing & Governance](CONTRIBUTING.md) – RFCs, symbol proposals, ethics
 - 🛣️ [Roadmap](ROADMAP.md) - Where we're going next
 - [Repository](https://github.com/SemanticEncoding/sce) - Where we are right now

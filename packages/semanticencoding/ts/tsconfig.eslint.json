@@ -2,10 +2,12 @@
     "extends": "./tsconfig.json",
     "include": [
         "src/**/*",
-        "tests/**/*"
     ],
     "exclude": [
+        "coverage/",
         "dist/**/*",
-        "node_modules"
+        "node_modules",
+        "coverage/**/**",
+        "tests/**/**",
     ]
 }

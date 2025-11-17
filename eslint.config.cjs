@@ -3,7 +3,17 @@ const tsEslintPlugin = require("@typescript-eslint/eslint-plugin");
 module.exports = [
   {
     // global ignores and shared settings
-    ignores: ["node_modules/**", "**/dist/**", "**/.tsbuildinfo"],
+    ignores: [
+      "node_modules/**/*",
+      "**/node_modules/**/*",
+      "dist",
+      "**/dist/**/*",
+      "coverage",
+      "**/coverage/*",
+      "**/coverage/**/*",
+      "**/.tsbuildinfo",
+      "packages/**/*",
+    ],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: "module",

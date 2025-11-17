@@ -19,15 +19,19 @@ theme:
     - scheme: slate
       primary: indigo
       accent: deep purple
-  extra_css:
-    - overrides/extra.css
+
+extra_css:
+  - overrides/extra.css
 
 nav:
   - Home: index.md
   - Getting started: GETTING-STARTED.md
+  - Prompting Guide: PROMPTING.md
+  - Usage:
+      - CLI Reference: CLI.md
+      - MCP Integration: MCP.md
+      - Ontology & API: ONTOLOGY-API.md
   - Specification: SPEC.md
-  - Ontology & API: ONTOLOGY-API.md
-  - MCP Integration: MCP.md
   - Contributing & Governance:
       - Contributing: CONTRIBUTING.md
       - Governance: GOVERNANCE.md
