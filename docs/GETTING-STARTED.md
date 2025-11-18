@@ -15,13 +15,13 @@ Alternatively, you can access the MCP server with the following Claude-style con
 {
   "mcpServers": {
     "semanticencoding": {
-      "command": "npx",
-      "args": [
+      	"command": "npx",
+      	"args": [
 				"--package=semanticencoding",
 				"-y",
 				"sce-mcp"
 			],
-			"type": "stdio"
+		"type": "stdio"
     }
   }
 }
