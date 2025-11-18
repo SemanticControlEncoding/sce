@@ -9,6 +9,24 @@ npm install semanticencoding
 npm install -g semanticencoding
 ```
 
+Alternatively, you can access the MCP server with the following Claude-style configuration entry:
+
+```json
+{
+  "mcpServers": {
+    "semanticencoding": {
+      "command": "npx",
+      "args": [
+				"--package=semanticencoding",
+				"-y",
+				"sce-mcp"
+			],
+			"type": "stdio"
+    }
+  }
+}
+```
+
 Once installed globally, you can use the `sce` command from any terminal. See the [CLI Reference](CLI.md) for detailed usage.
 
 For tips on using SCE symbols in your prompts to reduce tokens and increase clarity, see the [**Prompting Guide**](PROMPTING.md).
