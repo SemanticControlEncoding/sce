@@ -21,7 +21,12 @@ The easiest way to use the MCP server is through MCP clients like Claude Desktop
   "mcpServers": {
     "semanticencoding": {
       "command": "npx",
-      "args": ["-y", "semanticencoding@latest", "sce-mcp"]
+      "args": [
+				"--package=semanticencoding",
+				"-y",
+				"sce-mcp"
+			],
+			"type": "stdio"
     }
   }
 }
